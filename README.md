@@ -13,5 +13,4 @@ _Not the most creative person when it comes to writing bios..._
 ---
 
 
-###### You can find me at...
 **[LinkedIn](https://www.linkedin.com/in/luizberti/)**
