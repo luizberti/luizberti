@@ -1,0 +1,70 @@
+[user]
+name = Luiz Berti
+email = luizberti@users.noreply.github.com
+
+
+[core]
+editor = vim
+excludesfile = /etc/gitignore
+
+
+[commit]
+verbose = true
+
+
+[push]
+followtags = true
+
+
+[fetch]
+prune = true
+recursesubmodules = true
+
+
+[branch]
+autosetupmerge  = always  # always set tracking
+autosetuprebase = always  # always rebase on `pull`
+
+
+[rebase]
+autosquash = true
+
+
+[diff]
+mnemonicprefix = true
+renames = copy
+submodule = log
+algorithm = histogram
+
+
+[log]
+abbrevcommit = true
+decorate = true
+follow = true
+
+
+[rerere]
+autoupdate = true
+enabled = true
+
+
+[status]
+submodulesummary = true
+showuntrackedfiles = all
+short = true
+branch = true
+
+
+[tag]
+sort = version:refname
+
+
+[alias]
+oops  = commit --amend --no-edit
+force = push --force-with-lease
+branches = branch -vv
+remotes = remote -v
+check = checkout
+new = checkout -b
+lg = log --graph --oneline --all
+
