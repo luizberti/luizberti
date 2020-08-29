@@ -1,5 +1,3 @@
----
-
 _**Started programming at roughly 12 years old and have been pretty much hooked since then.**_
 
 _**Long time user of \*NIX, with a strong systems programming background, and passionate
