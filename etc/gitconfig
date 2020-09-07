@@ -28,6 +28,7 @@ autosetuprebase = always  # always rebase on `pull`
 
 [rebase]
 autosquash = true
+autostash = true
 
 
 [diff]
