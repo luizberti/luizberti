@@ -17,6 +17,10 @@ writecommitgraph = true
 verbose = true
 
 
+[pull]
+rebase = true
+
+
 [push]
 followtags = true
 
