@@ -6,6 +6,11 @@ email = luizberti@users.noreply.github.com
 [core]
 editor = vim
 excludesfile = /etc/gitignore
+commitgraph = true
+
+
+[gc]
+writecommitgraph = true
 
 
 [commit]
