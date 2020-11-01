@@ -41,6 +41,10 @@ brew 'nmap'
 brew 'tcpdump'
 brew 'unbound'
 brew 'vegeta'
+brew 'tcpflow'
+brew 'cfssl'
+brew 'mkcert'
+brew 'mitmproxy'
 brew 'caddy'
 brew 'wireguard-tools'
 cask 'wireshark'
@@ -108,7 +112,12 @@ brew 'awscli'
 cask 'google-cloud-sdk'
 brew 'terraform'
 brew 'kubernetes-cli'
-brew 'helm'
+brew 'kubectx'  # kubens is included
+brew 'minikube'
+brew 'k3d'  # TODO should I keep this?
+brew 'kubecfg'
+brew 'krew'
+brew 'k9s'
 
 
 # DESKTOP APPS
@@ -136,6 +145,7 @@ mas  'Things3', id: 904280696
 mas  'iA Writer', id: 775737590
 mas  'Notability', id: 736189492
 mas  '1Password 7', id: 1333542190
+cask 'lens'
 cask 'proxyman'
 cask 'codekit'
 cask 'dash'

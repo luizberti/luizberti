@@ -23,6 +23,7 @@ rebase = true
 
 [push]
 followtags = true
+default = simple
 
 
 [fetch]
