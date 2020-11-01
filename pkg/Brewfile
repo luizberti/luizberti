@@ -124,7 +124,7 @@ brew 'k9s'
 # ============
 
 cask 'firefox'
-cask 'google-chrome'
+cask 'chromium'  # substituted cask 'google-chrome'
 cask 'transmission'
 cask 'spotify'
 cask 'vlc'
