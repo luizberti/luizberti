@@ -26,6 +26,10 @@ followtags = true
 default = simple
 
 
+[checkout]
+defaultremote = origin
+
+
 [fetch]
 prune = true
 recursesubmodules = true
@@ -71,7 +75,7 @@ sort = version:refname
 
 
 [alias]
-new = checkout -b
+new = checkout --track -b
 oops = commit --amend --no-edit
 pushup = push --set-upstream origin HEAD
 force = push --force-with-lease
