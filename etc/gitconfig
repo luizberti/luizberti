@@ -71,11 +71,17 @@ sort = version:refname
 
 
 [alias]
-oops  = commit --amend --no-edit
+new = checkout -b
+oops = commit --amend --no-edit
+pushup = push --set-upstream origin HEAD
 force = push --force-with-lease
+
+fork = !cd -- "${GIT_PREFIX:-.}" && sh -c 'CMD="$1" shift && git fork-"$CMD" $@' --
+fork-diff = !cd -- "${GIT_PREFIX:-.}" && git diff --relative $(git merge-base master HEAD)
+fork-changed = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only $(git merge-base master HEAD)
+fork-changed-nodel = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only --diff-filter=d $(git merge-base master HEAD)
+
 branches = branch -vv
 remotes = remote -v
-check = checkout
-new = checkout -b
+goto = checkout
 lg = log --graph --oneline --all
-
