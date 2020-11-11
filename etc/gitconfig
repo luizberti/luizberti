@@ -17,8 +17,13 @@ writecommitgraph = true
 verbose = true
 
 
+[merge]
+ff = false
+
+
 [pull]
 rebase = true
+ff = only
 
 
 [push]
