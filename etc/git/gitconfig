@@ -5,8 +5,13 @@ email = luizberti@users.noreply.github.com
 
 [core]
 editor = vim
-excludesfile = /etc/gitignore
+hookspath = /etc/git/hooks.d/
+excludesfile = /etc/git/gitignore
 commitgraph = true
+
+
+[init]
+templatedir = /etc/git/templates.d/default/
 
 
 [gc]
@@ -81,6 +86,7 @@ sort = version:refname
 
 [alias]
 new = checkout --track -b
+goto = checkout
 oops = commit --amend --no-edit
 pushup = push --set-upstream origin HEAD
 force = push --force-with-lease
@@ -90,7 +96,8 @@ fork-diff = !cd -- "${GIT_PREFIX:-.}" && git diff --relative $(git merge-base ma
 fork-changed = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only $(git merge-base master HEAD)
 fork-changed-nodel = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only --diff-filter=d $(git merge-base master HEAD)
 
-branches = branch -vv
+dangling = !git branch --format='%(refname:short):%(push:track)' | awk -F: '$2=="[gone]" {print $1}'
+
 remotes = remote -v
-goto = checkout
+branches = branch -vv
 lg = log --graph --oneline --all
