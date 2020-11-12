@@ -1,3 +1,5 @@
+*.gitignore
+
 # GARBAGE
 # os, filesystem, and display manager generatated metadata
 
@@ -10,8 +12,6 @@
 Desktop.ini
 Thumbs.db
 ?Icon
-._*
-_*
 
 
 # DEVELOPMENT
