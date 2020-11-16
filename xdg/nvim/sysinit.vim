@@ -30,7 +30,7 @@ function! XTermPasteBegin()
     return ""
 endfunction
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('/etc/xdg/nvim/plugged')
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
