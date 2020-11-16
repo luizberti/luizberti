@@ -96,7 +96,7 @@ fork-diff = !cd -- "${GIT_PREFIX:-.}" && git diff --relative $(git merge-base ma
 fork-changed = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only $(git merge-base master HEAD)
 fork-changed-nodel = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only --diff-filter=d $(git merge-base master HEAD)
 
-dangling = !git branch --format='%(refname:short):%(push:track)' | awk -F: '$2=="[gone]" {print $1}'
+dangling = !git branch --format='%(refname:short):%(push:track)' | awk -F: '$2==\"[gone]\" {print $1}'
 
 remotes = remote -v
 branches = branch -vv
