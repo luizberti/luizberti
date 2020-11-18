@@ -11,6 +11,7 @@ commitgraph = true
 
 
 [init]
+defaultbranch = master
 templatedir = /etc/git/templates.d/default/
 
 
