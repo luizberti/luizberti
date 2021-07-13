@@ -1,0 +1,77 @@
+*.gitignore
+
+# GARBAGE
+# os, filesystem, and display manager generatated metadata
+
+.Spotlight-V100
+.Trashes
+.Trash
+.DS_Store
+.CFUserTextEncoding
+.localized
+Desktop.ini
+Thumbs.db
+?Icon
+
+
+# DEVELOPMENT
+# editor recovery, project specs, and other state keeping metadata
+
+*.swp
+.idea/
+.vscode/
+.venv/
+.terraform/
+cover/
+deps/
+
+
+# ARTIFACTS
+# build artifacts and other non-source files
+
+*.bkp
+*.bak
+*.bk
+*.backup
+*.log
+*.pyc
+*.whl
+*.egg-info
+*.a
+*.o
+*.so
+*.ez
+*.tfstate
+*.dump
+.fetch
+.cache/
+.sass-cache/
+__pycache__/
+_build/
+target/
+build/
+dist/
+bin/
+
+
+# RAW DATA
+# data in raw/database/archival form
+
+*.rdb
+*.aof
+*.sqlite
+*.sqlite2
+*.sqlite3
+*.csv
+*.tsv
+*.parquet
+*.orc
+*.tar
+*.tar.*
+*.gz
+*.xz
+*.zstd
+*.zst
+*.lz4
+*.zip
+

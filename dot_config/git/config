@@ -1,0 +1,104 @@
+[user]
+name = Luiz Berti
+email = luizberti@users.noreply.github.com
+
+
+[core]
+editor = vim
+hookspath = ~/.config/git/hooks.d/
+excludesfile = ~/.config/git/ignore
+commitgraph = true
+
+
+[init]
+defaultbranch = master
+templatedir = ~/.config/git/templates.d/default/
+
+
+[gc]
+writecommitgraph = true
+
+
+[commit]
+verbose = true
+
+
+[merge]
+ff = false
+
+
+[pull]
+rebase = true
+ff = only
+
+
+[push]
+followtags = true
+default = simple
+
+
+[checkout]
+defaultremote = origin
+
+
+[fetch]
+prune = true
+recursesubmodules = true
+
+
+[branch]
+autosetupmerge  = always  # always set tracking
+autosetuprebase = always  # always rebase on `pull`
+
+
+[rebase]
+autosquash = true
+autostash = true
+
+
+[diff]
+mnemonicprefix = true
+renames = copy
+submodule = log
+algorithm = histogram
+
+
+[log]
+abbrevcommit = true
+decorate = true
+follow = true
+
+
+[rerere]
+autoupdate = true
+enabled = true
+
+
+[status]
+submodulesummary = true
+showuntrackedfiles = all
+short = true
+branch = true
+
+
+[tag]
+sort = version:refname
+
+
+[alias]
+new = checkout --track -b
+goto = checkout
+oops = commit --amend --no-edit
+pushup = push --set-upstream origin HEAD
+force = push --force-with-lease
+
+fork = !cd -- "${GIT_PREFIX:-.}" && sh -c 'CMD="$1" shift && git fork-"$CMD" $@' --
+fork-diff = !cd -- "${GIT_PREFIX:-.}" && git diff --relative $(git merge-base master HEAD)
+fork-changed = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only $(git merge-base master HEAD)
+fork-changed-nodel = !cd -- "${GIT_PREFIX:-.}" && git diff --relative --name-only --diff-filter=d $(git merge-base master HEAD)
+
+dangling = !git branch --list --format '%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' | grep . || [[ $? == 1 ]]
+
+remotes = remote -v
+branches = branch -vv
+lg = log --graph --oneline --all
