@@ -9,28 +9,9 @@ HISTSIZE=1000
 HISTFILESIZE=10000
 HISTCONTROL=ignoredups:ignorespace
 HISTTIMEFORMAT='%s  '
-PROMPT_COMMAND="$(cat <<EOF
-PROMPT_EXIT=\$?
-test \$PROMPT_EXIT -eq 0 && unset PROMPT_EXIT || PROMPT_EXIT="  ⌦ \$PROMPT_EXIT"
 
-# HISTCONTROL=ignoredups MAY SCREW WITH THIS TIMER
-PROMPT_ELAPSED=\$[\$(date +%s)-\$(history 1 | awk 'NR==1 {print \$2}')]
-test \$PROMPT_ELAPSED -lt 8 && unset PROMPT_ELAPSED || PROMPT_ELAPSED="  Δ \${PROMPT_ELAPSED}s"
-
-# ROOT COLOR
-
-# GIT INTEGRATION
-PROMPT_GIT="  \$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
-if test \$? -eq 0; then
-    PROMPT_GIT_REMOTE="\$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)"
-    if test \$? -eq 0; then
-        PROMPT_GIT="\$PROMPT_GIT \$(git rev-list --left-right --count \$PROMPT_GIT...\$PROMPT_GIT_REMOTE | awk '{printf "⇣%s⇡%s",\$2,\$1}')"
-    fi; unset PROMPT_GIT_REMOTE
-else
-    unset PROMPT_GIT
-fi
-EOF
-)"
+# PROMPT
+[ -x "$(command -v starship)" ] && eval "$(starship init bash)"
 
 
 # PATH MANGLING

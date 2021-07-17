@@ -1,4 +1,5 @@
 set -U EDITOR nvim
+set -U NIXPKGS_ALLOW_UNFREE 1
 
 
 if status is-interactive
