@@ -10,4 +10,5 @@ Curious strangers are encouraged to reach out!
 | [LinkedIn](https://www.linkedin.com/in/luizberti/)**
 
 > [!NOTE]
-> Most of my work is not public or on GitHub
+> I'm migrating to privately hosted git, **most of my stuff is
+> therefore not on GitHub.**
