@@ -11,4 +11,4 @@ Curious strangers are encouraged to reach out!
 
 > [!NOTE]
 > I'm migrating to privately hosted git, **most of my stuff is
-> therefore not on GitHub.**
+> no longer on GitHub.**
